@@ -1,0 +1,19 @@
+<html>
+    <div>
+        <h1>Introduccion a Django - Blog Detail</h1>
+    </div>
+    <body>
+        <div>
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.text }}</p>
+            <p>Publicado por: {{ post.author }}</p>
+        </div>
+    </body>
+    <form method="post" action="{%  url 'post_delete' post.pk %}">
+       {% csrf_token %}
+       <p>¿quieres borrar el post {{ post.title}}?</p>
+       <input type="submit" value="Si">
+    </form>
+
+    <a href="{%  url 'post_update' post.pk %}"> Edita este post</a>
+</html>
