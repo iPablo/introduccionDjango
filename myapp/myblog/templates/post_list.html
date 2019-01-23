@@ -2,6 +2,7 @@
     <div>
         <h1>Introduccion a Django - Blog</h1>
     </div>
+    <h2><a href="{% url 'post_create' %}">Crea un nuevo Post</a></h2>
     <body>
         <div>
             {%  for post in post_list %}
